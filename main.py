@@ -1,14 +1,12 @@
-from classes.DoublyLinkedList import *
+from classes.VehicleLinkedList import VehicleLinkedList
+from classes.Vehicle import Vehicle
+from classes.VehicleType import VehicleType
 
+test = Vehicle(VehicleType.HATCHBACK, 2.28, is_electric=True)
 
-test = DoublyLinkedList()
+print(test)
 
-test.append(24)
-test.append(14)
-test.append(4)
-
-test.print_list()
-
-test.insert(0, 25)
-
-test.print_list()
+test2 = VehicleLinkedList()
+test2.insert_at(0, test)
+print(test2)
+test2.display_table()
