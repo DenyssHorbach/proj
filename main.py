@@ -1,12 +1,17 @@
 from classes.VehicleLinkedList import VehicleLinkedList
 from classes.Vehicle import Vehicle
 from classes.VehicleType import VehicleType
+from menu import *
 
-test = Vehicle(VehicleType.HATCHBACK, 2.28, is_electric=True)
-
-print(test)
+test_car = Vehicle(VehicleType.TRUCK, 1.0, is_electric=True)
+test_car2 = Vehicle(VehicleType.HATCHBACK, 1.6, is_electric=False)
+test_car3 = Vehicle(VehicleType.SEDAN, 1.2, is_electric=True)
+test_car4 = Vehicle(VehicleType.SUV, 1.0, is_electric=False)
 
 test2 = VehicleLinkedList()
-test2.insert_at(0, test)
+test2.insert_at(0, test_car)
+test2.insert_at(1, test_car2)
+test2.insert_at(2, test_car3)
+test2.insert_at(3, test_car4)
 print(test2)
 test2.display_table()

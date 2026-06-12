@@ -142,7 +142,7 @@ class VehicleLinkedList:
             print("[list is empty]")
             return
         print("-" * 50)
-        print(f"{'№':<3} | {'Type':<15} | {'Engine capacity':<14} | {'Electric':<10}")
+        print(f"{'№':<3} | {'Type':<15} | {'Engine capacity':<14} | {'Is electric':<10}")
         print("-" * 50)
         current = self._head
         idx = 0
