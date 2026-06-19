@@ -15,31 +15,25 @@ class VehicleLinkedList:
 
     @property
     def length(self) -> int:
-        """Властивість (читання) - довжина списку (d)"""
         return self._length
 
-    # a) Метод додавання елемента до n-ї позиції списку
     def insert_at(self, index: int, vehicle: Vehicle):
         if index < 0 or index > self._length:
             raise IndexError("Index out of range")
 
         new_node = Node(vehicle)
 
-        # Якщо список порожній
         if self._length == 0:
             self._head = new_node
             self._tail = new_node
-        # Додавання на початок
         elif index == 0:
             new_node.next = self._head
             self._head.prev = new_node
             self._head = new_node
-        # Додавання в кінець
         elif index == self._length:
             new_node.prev = self._tail
             self._tail.next = new_node
             self._tail = new_node
-        # Додавання в середину
         else:
             current = self._get_node_at(index)
             new_node.prev = current.prev

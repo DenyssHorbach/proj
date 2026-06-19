@@ -12,7 +12,6 @@ class Vehicle:
 
     @vehicle_type.setter
     def vehicle_type(self, value):
-        # Перевіряємо, чи збігається ім'я класу або його базового класу з 'VehicleType'
         if type(value).__name__ != 'VehicleType' and not any(
                 b.__name__ == 'VehicleType' for b in type(value).__bases__):
             raise TypeError("Incorrect type")
